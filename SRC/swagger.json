@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+
+    "info":{
+        "title":"API_Projeto_Jobsnet",
+        "description": "API banco de curriculos - Jobsnet",
+        "version": "0.0.1"
+    },
+
+    "servers":[
+        {
+            "url":"http://localhost:5000",
+            "description": "Ambiente de desenvolvimento"
+        }
+    ],
+
+    "paths":{
+        "/registro":{
+            "post":{
+                "summary": "Cadastro de Candidato",
+                "description": "Rota de cadastro de usuario, recebe: nome, cargoPretendido, mes, dia, ano, estadoCivil",
+                "tags":["Candidato"],
+                "requestBody":{
+                    "content":{
+                        "aplication/json":{
+                            "schema":{
+                                "properties":{
+                                    "nome":{
+                                        "type":"string"
+                                    },
+                                    "cargoPretendido":{
+                                        "type":"string"
+                                    },
+                                    "mes":{
+                                        "type":"string"
+                                    },
+                                    "dia":{
+                                        "type":"string"
+                                    },
+                                    "ano":{
+                                        "type":"string"
+                                    },
+                                    "estadoCivil":{
+                                        "type":"string"
+                                    },
+                                    "sexo":{
+                                        "type":"string"
+                                    },
+                                    "email":{
+                                        "type":"string"
+                                    },
+                                    "cep":{
+                                        "type":"string"
+                                    },
+                                    "endereco":{
+                                        "type":"string"
+                                    },
+                                    "bairro":{
+                                        "type":"string"
+                                    },
+                                    "cidade":{
+                                        "type":"string"
+                                    },
+                                    "celular":{
+                                        "type":"string"
+                                    },
+                                    "telefoneFixo1":{
+                                        "type":"string"
+                                    },
+                                    "telefoneFixo2":{
+                                        "type":"string"
+                                    },
+                                    "contato":{
+                                        "type":"string"
+                                    },
+                                    "identidade":{
+                                        "type":"string"
+                                    },
+                                    "cpf":{
+                                        "type":"string"
+                                    },
+                                    "veiculo":{
+                                        "type":"string"
+                                    },
+                                    "habilitacao":{
+                                        "type":"string"
+                                    }   
+
+                                }
+                        },
+                            "examples":{
+                                "example1":{
+                                    "value":{
+
+                                        "nome": "Dora Barrios",
+                                        "cargoPretendido": "Programador-Junior",
+                                        "mes": "12",
+                                        "dia": "12",
+                                        "ano": "2021",
+                                        "estadoCivil": "Casada",
+                                        "sexo": "Femenino",
+                                        "email": "dora@teste.com",
+                                        "cep": "14000000",
+                                        "endereco": "Rua X",
+                                        "bairro": "Manoel Pena",
+                                        "cidade": "Sao Paulo",
+                                        "celular": "16-99000-0000",
+                                        "telefoneFixo1": "169000-0001",
+                                        "telefoneFixo2": "169000-0002",
+                                        "contato": "",
+                                        "identidade": "123456789",
+                                        "cpf": "00000000078",
+                                        "veiculo": "Nao",
+                                        "habilitacao": "Sim"                                                                             
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
